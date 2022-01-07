@@ -60,6 +60,12 @@ export default new Router({
       name: "user",
       // lazy-loaded
       component: () => import("@/viewer/BoardUser")
+    },
+    {
+      path: "/add",
+      name: "add",
+      // lazy-loaded
+      component: () => import("@/viewer/PostsAdd")
     }
   ]
 });

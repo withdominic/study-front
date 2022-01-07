@@ -1,5 +1,6 @@
 <template>
-  <div id="app">
+  <v-app id="app">
+<!--  <div id="app"> -->
     <nav class="navbar navbar-expand navbar-dark bg-dark">
       <a href class="navbar-brand" @click.prevent>Vue Study Project</a>
       <div class="navbar-nav mr-auto">
@@ -53,7 +54,8 @@
     <div class="container">
       <router-view />
     </div>
-  </div>
+<!--    </div> -->
+  </v-app>
 </template>
 
 <script>

@@ -6,7 +6,10 @@ import router from "./router";
 import store from "./store";
 import axios from "axios";
 import Vuex from "vuex";
-import vuetify from "@/plugins/vuetify"; // path to vuetify export
+// vuetify
+import Vuetify from "vuetify";
+import "vuetify/dist/vuetify.min.css";
+//import vuetify from "@/plugins/vuetify"; // path to vuetify export
 //import BootstrapVue from "bootstrap-vue";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
@@ -32,6 +35,7 @@ Vue.component("ValidationProvider", ValidationProvider);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
 Vue.use(Vuex);
+Vue.use(Vuetify);
 //Vue.use(BootstrapVue);
 
 Vue.prototype.$validator = VeeValidate;
@@ -56,7 +60,7 @@ new Vue({
   el: "#app",
   router,
   store,
-  vuetify,
+  vuetify: new Vuetify(),
   VeeValidate,
   components: { App, ValidationObserver, ValidationProvider },
   template: "<App/>"
